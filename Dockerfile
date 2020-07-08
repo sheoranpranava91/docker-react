@@ -13,5 +13,6 @@ RUN npm run build
 
 # RUN phase
 FROM  nginx
-
+# Needed on elastic beanstalk
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
